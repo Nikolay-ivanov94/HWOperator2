@@ -21,14 +21,17 @@ public class Main {
         }
         System.out.println();
 
-        int year = 1584;
-        if (year % 4 == 0 && year >= 1584) {
+        int year = 1600;
+        if (year >= 1584) {
+           if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
             System.out.println(year + " год является високосным");
-        } else if (year % 4 != 0 && year >= 1584) {
-            System.out.println(year + " год не является високосным");
+        } else if ((year % 400 != 0) || (year % 4 != 0 && year % 100 == 0)) {
+           System.out.println(year + " год не является високосным");
         } else {
             System.out.println("Назовите год после 1584 года");
         }
+        }
+
         System.out.println();
 
         int deliveryDistance = 95;
@@ -45,7 +48,8 @@ public class Main {
 
 
         int monthNumber = 12;
-        switch (monthNumber) {
+        if (monthNumber <= 12);
+         switch (monthNumber) {
             case 1:
             case 2:
             case 12:
